@@ -83,10 +83,10 @@ author:
   name             : "Adhyyan Narang"
   avatar           : "headshot.png"
   bio              : "Master's Student at UC Berkeley"
-  location         : "264 Cory Hall, Berkeley, CA - 74704"
+  location         : "264 Cory Hall, UC Berkeley"
   employer         :
-  pubmed           : 
-  googlescholar    : 
+  pubmed           :
+  googlescholar    :
   email            :  "adhyyan-n@berkeley.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
@@ -100,21 +100,21 @@ author:
   google_plus      :
   keybase          :
   instagram        :
-  impactstory      : 
+  impactstory      :
   lastfm           :
   linkedin         : "adhyyan-narang"
-  orcid            : 
+  orcid            :
   pinterest        :
   soundcloud       :
-  stackoverflow    : 
+  stackoverflow    :
   steam            :
   tumblr           :
-  twitter          : 
+  twitter          :
   vine             :
   weibo            :
   xing             :
   youtube          :
-  wikipedia        : 
+  wikipedia        :
 
 # Reading Files
 include:
