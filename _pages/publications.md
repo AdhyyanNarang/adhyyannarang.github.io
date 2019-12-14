@@ -5,8 +5,6 @@ permalink: /publications/
 author_profile: true
 ---
 
-Hey, the publications are working.
-
 {% include base_path %}
 
 {% for post in site.publications reversed %}
