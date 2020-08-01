@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Adhyyan Narang" 
+title: "Adhyyan Narang"
 excerpt: "About me"
 author_profile: true
 redirect_from:
@@ -10,14 +10,10 @@ redirect_from:
 
 ## About
 
-I am a Master's student in the [BLISS Lab](http://bliss.eecs.berkeley.edu/) in the [EECS](https://eecs.berkeley.edu/) department at [UC Berkeley](https://www.berkeley.edu/), advised by Prof. Anant Sahai. I also do research in the [BAIR](https://bair.berkeley.edu/) Lab, advised by Prof. Laurent El Ghaoui. I recently completed my undergraduate studies at UC Berkeley with a major in EECS and minor in Theater and Performance Studies. During my undergrad, I worked with Prof. Dawn Song.
+I am an incoming PhD Student in the [ECE Department](https://www.ece.uw.edu/) of University of Washington, and will be advised by [Prof. Maryam Fazel](https://faculty.washington.edu/mfazel/) and [Prof. Lilian Ratliff](http://faculty.washington.edu/ratliffl/about/).
+
+I recently completed my Masters in the [BLISS Lab](http://bliss.eecs.berkeley.edu/) in the [EECS](https://eecs.berkeley.edu/) department at [UC Berkeley](https://www.berkeley.edu/), where I was advised by Prof. Anant Sahai. My master's thesis can be found on the publications tab. I also completed my undergraduate studies at UC Berkeley with a major in EECS and minor in Theater and Performance Studies.
 
 ## Research Interests
 
-I am primarily interested in investigating theoretical problems within Machine Learning that include, but are not limited to:
-
-- Test-time adversarial attacks (Adversarial Examples) in deep learning
-- Train-time adversarial attacks (Data Poisoning) in linear models.
-- Generalization performance of overparameterized models for classification.
-
-My research especially leverages insight from Optimization, Statistical Learning Theory, Signal Processing, and I am sure we would find something to talk about if you are interested in any of these fields.
+My research interests lie within optimization, statistical learning theory and signal processing. I am interested in investigating fundamental questions in modern machine learning and deep-learning, particularly the generalization and robustness of overparameterized models.
