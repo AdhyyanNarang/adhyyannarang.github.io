@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Publications"
+title: 
 permalink: /publications/
 author_profile: true
 ---
@@ -9,20 +9,42 @@ author_profile: true
 
 (\*) Equal contribution
 
-{% for post in site.publications reversed %}
 
-  {% if post.urltext %}
-	{% if post.venue %}
-		***{{ post.title }}***
-		{{post.authors}}. *{{post.venue}} {{post.year}}* [({{post.urltext}})]({{post.arxivurl}})
-	{% else %}
-		***{{ post.title }}***
-		{{post.authors}}. *{{post.year}}* [({{post.urltext}})]({{post.arxivurl}})
-	{% endif %}
+{% for post in site.preprints reversed %}
 
-  {% else %}
-    ***{{ post.title }}***
-    {{post.authors}}. *{{post.year}}*
-  {% endif %}
+{% if post.urltext %}
+{% if post.venue %}
+**{{ post.title }}**   
+{{post.authors}}. *{{post.venue}} {{post.year}}* [({{post.urltext}})]({{post.arxivurl}})
+{% else %}
+**{{ post.title }}**   
+{{post.authors}}. *{{post.year}}* [({{post.urltext}})]({{post.arxivurl}})
+{% endif %}
+
+{% else %}
+**{{ post.title }}**   
+{{post.authors}}. *{{post.year}}*
+{% endif %}
 
 {% endfor %}
+
+
+{% for post in site.publications reversed %}
+
+{% if post.urltext %}
+{% if post.venue %}
+**{{ post.title }}**   
+{{post.authors}}. *{{post.venue}} {{post.year}}* [({{post.urltext}})]({{post.arxivurl}})
+{% else %}
+**{{ post.title }}**   
+{{post.authors}}. *{{post.year}}* [({{post.urltext}})]({{post.arxivurl}})
+{% endif %}
+
+{% else %}
+**{{ post.title }}**   
+{{post.authors}}. *{{post.year}}*
+{% endif %}
+
+{% endfor %}
+
+

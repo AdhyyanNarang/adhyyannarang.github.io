@@ -1,9 +1,13 @@
 ---
 title: 'Decision Dependent Learning in the Presence of Competition'
 authors: 'Adhyyan Narang, Evan Faulkner, Dmitriy Drusvyatskiy, Maryam Fazel, Lillian J Ratliff'
-collection: publications
-permalink: /publication/2010-10-01-paper-title-number-1
-year: 2020
+urltext:
+arxivurl:
+collection: preprints
+permalink: /preprint/2010-10-01-paper-title-number-1
+year: 2021
+venue: 
+date: 2021-09-27
 
 ---
 

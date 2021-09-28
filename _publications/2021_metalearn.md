@@ -1,13 +1,13 @@
 ---
-title: 'Classification vs regression in overparameterized regimes: Does the loss function matter?'
-authors: 'Vidya Muthukumar\*,  Adhyyan Narang\*, Vignesh Subramanian\*, Mikhail Belkin, Daniel Hsu, Anant Sahai'
-collection: publications
-urltext: 'arxiv'
-arxivurl: 'https://arxiv.org/abs/2005.08054'
-permalink: /publication/2010-10-01-paper-title-number-1
-date: 2020-5-15
-year: 2020
-venue: JMLR
+title: 'Towards Sample-Efficient Overparameterized Meta-Learning'
+authors: 'Yue Sun, Adhyyan Narang, Ibrahim Gulluk, Samet Oymak, Maryam Fazel'
+urltext:
+arxivurl:
+collection: preprints
+permalink: /preprint/2010-10-01-paper-title-number-1
+year: 2021
+venue: 
+date: 2021-08-25
 
 ---
 
