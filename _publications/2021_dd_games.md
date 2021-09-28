@@ -1,12 +1,9 @@
 ---
-title: 'Classification vs regression in overparameterized regimes: Does the loss function matter?'
-authors: 'Vidya Muthukumar\*,  Adhyyan Narang\*, Vignesh Subramanian\*, Mikhail Belkin, Daniel Hsu, Anant Sahai'
+title: 'Decision Dependent Learning in the Presence of Competition'
+authors: 'Adhyyan Narang, Evan Faulkner, Dmitriy Drusvyatskiy, Maryam Fazel, Lillian J Ratliff'
 collection: publications
-urltext: 'arxiv'
-arxivurl: 'https://arxiv.org/abs/2005.08054'
 permalink: /publication/2010-10-01-paper-title-number-1
 year: 2020
-venue: JMLR
 
 ---
 
