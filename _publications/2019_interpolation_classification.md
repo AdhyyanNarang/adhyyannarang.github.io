@@ -6,7 +6,7 @@ urltext: 'arxiv'
 arxivurl: 'https://arxiv.org/abs/2005.08054'
 permalink: /publication/2010-10-01-paper-title-number-1
 date: 2020-5-15
-year: 2020
+year: 2021
 venue: JMLR
 
 ---

@@ -22,15 +22,19 @@ author_profile: true
 {% endif %}
 
 {% else %}
+{% if post.venue %}
+**{{ post.title }}**   
+{{post.authors}}. *{{post.venue}} {{post.year}}* 
+{% else %}
 **{{ post.title }}**   
 {{post.authors}}. *{{post.year}}*
+{% endif %}
 {% endif %}
 
 {% endfor %}
 
 
 {% for post in site.publications reversed %}
-
 {% if post.urltext %}
 {% if post.venue %}
 **{{ post.title }}**   
@@ -41,10 +45,13 @@ author_profile: true
 {% endif %}
 
 {% else %}
+{% if post.venue %}
+**{{ post.title }}**   
+{{post.authors}}. *{{post.venue}} {{post.year}}* 
+{% else %}
 **{{ post.title }}**   
 {{post.authors}}. *{{post.year}}*
 {% endif %}
+{% endif %}
 
 {% endfor %}
-
-

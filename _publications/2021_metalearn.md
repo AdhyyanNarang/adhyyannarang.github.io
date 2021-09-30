@@ -6,7 +6,7 @@ arxivurl:
 collection: preprints
 permalink: /preprint/2010-10-01-paper-title-number-1
 year: 2021
-venue: 
+venue: Neurips
 date: 2021-08-25
 
 ---
