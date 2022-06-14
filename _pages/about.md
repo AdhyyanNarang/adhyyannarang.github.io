@@ -10,9 +10,9 @@ redirect_from:
 
 ## Bio
 
-I am  a PhD Student in the [ECE Department](https://www.ece.uw.edu/) of University of Washington, advised by [Prof. Maryam Fazel](https://faculty.washington.edu/mfazel/) and [Prof. Lillian Ratliff](http://faculty.washington.edu/ratliffl/about/).
+I am  a PhD Student in the [ECE Department](https://www.ece.uw.edu/) of University of Washington, advised by [Prof. Maryam Fazel](https://faculty.washington.edu/mfazel/) and [Prof. Lillian Ratliff](http://faculty.washington.edu/ratliffl/about/). I am fortunate to collaborate on projects with Prof. Dmitriy Drusvyatskiy, Prof. Jeff Bilmes and Prof. Samet Oymak.
 
-I recently completed my Masters in the [BLISS Lab](http://bliss.eecs.berkeley.edu/) in the [EECS](https://eecs.berkeley.edu/) department at [UC Berkeley](https://www.berkeley.edu/), where I was advised by Prof. Anant Sahai. My master's thesis explored the role of margins for overparameterized classification problems and can be found [here](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2020/EECS-2020-116.pdf). 
+I completed my Masters in 2020 in the [BLISS Lab](http://bliss.eecs.berkeley.edu/) in the [EECS](https://eecs.berkeley.edu/) department at [UC Berkeley](https://www.berkeley.edu/), where I was advised by Prof. Anant Sahai. My master's thesis explored the role of margins for overparameterized classification problems and can be found [here](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2020/EECS-2020-116.pdf). During this period, I had the good fortune of collaborating with Prof. Vidya Muthukumar (Georgia Tech), Prof.Daniel Hsu (Columbia) and Prof. Misha Belkin (UCSD).
 
 I completed my undergraduate studies at UC Berkeley with a major in EECS and minor in Theater and Performance Studies.
 

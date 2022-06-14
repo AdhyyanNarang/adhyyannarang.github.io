@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: 
+title:
 permalink: /publications/
 author_profile: true
 ---
@@ -14,19 +14,19 @@ author_profile: true
 
 {% if post.urltext %}
 {% if post.venue %}
-**{{ post.title }}**   
+**{{ post.title }}**
 {{post.authors}}. *{{post.venue}} {{post.year}}* [({{post.urltext}})]({{post.arxivurl}})
 {% else %}
-**{{ post.title }}**   
+**{{ post.title }}**
 {{post.authors}}. *{{post.year}}* [({{post.urltext}})]({{post.arxivurl}})
 {% endif %}
 
 {% else %}
 {% if post.venue %}
-**{{ post.title }}**   
-{{post.authors}}. *{{post.venue}} {{post.year}}* 
+**{{ post.title }}**
+{{post.authors}}. *{{post.venue}} {{post.year}}*
 {% else %}
-**{{ post.title }}**   
+**{{ post.title }}**
 {{post.authors}}. *{{post.year}}*
 {% endif %}
 {% endif %}
@@ -37,19 +37,19 @@ author_profile: true
 {% for post in site.publications reversed %}
 {% if post.urltext %}
 {% if post.venue %}
-**{{ post.title }}**   
+**{{ post.title }}**
 {{post.authors}}. *{{post.venue}} {{post.year}}* [({{post.urltext}})]({{post.arxivurl}})
 {% else %}
-**{{ post.title }}**   
+**{{ post.title }}**
 {{post.authors}}. *{{post.year}}* [({{post.urltext}})]({{post.arxivurl}})
 {% endif %}
 
 {% else %}
 {% if post.venue %}
-**{{ post.title }}**   
-{{post.authors}}. *{{post.venue}} {{post.year}}* 
+**{{ post.title }}**
+{{post.authors}}. *{{post.venue}} {{post.year}}*
 {% else %}
-**{{ post.title }}**   
+**{{ post.title }}**
 {{post.authors}}. *{{post.year}}*
 {% endif %}
 {% endif %}
