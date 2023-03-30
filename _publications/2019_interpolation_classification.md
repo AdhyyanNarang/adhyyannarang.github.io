@@ -1,10 +1,11 @@
 ---
 title: 'Classification vs regression in overparameterized regimes: Does the loss function matter?'
 authors: 'Vidya Muthukumar\*,  Adhyyan Narang\*, Vignesh Subramanian\*, Mikhail Belkin, Daniel Hsu, Anant Sahai'
-collection: publications
+collection: 'overparam'
+category: 'overparam'
 urltext: 'arxiv'
 arxivurl: 'https://arxiv.org/abs/2005.08054'
-permalink: /publication/2010-10-01-paper-title-number-1
+permalink: /overparam/2010-10-01-paper-title-number-1
 date: 2020-5-15
 year: 2021
 venue: JMLR

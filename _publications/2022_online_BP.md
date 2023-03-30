@@ -4,6 +4,7 @@ authors: 'Adhyyan Narang, Omid Sadeghi, Lillian J Ratliff, Maryam Fazel, Jeff Bi
 urltext:
 arxivurl:
 collection: preprints
+category: 'online'
 permalink: /preprint/2010-10-01-paper-title-number-1
 year: 2022
 venue: In Submission to Neurips

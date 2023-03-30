@@ -2,7 +2,7 @@
 permalink: /
 title: "Adhyyan Narang"
 excerpt: "About me"
-author_profile: true
+author_profile: true 
 redirect_from:
   - /about/
   - /about.html
@@ -18,11 +18,6 @@ I completed my undergraduate studies at UC Berkeley with a major in EECS and min
 
 ## Research Interests
 
-My research interests lie within optimization, game theory, and statistical learning theory; I often use tools from signal processing and dynamical systems. Broadly, I am interested in developing theory to inspire the development of principled and robust ML systems. Topics that I am especially interested in are introduced below, and my work can be found in the publications tab.
 
-**Overparameterized machine learning:** The success of neural networks with many more parameters than available data points cannot be explained by traditional learning theory, which emphasizes the importance of the bias variance tradeoff. Hence a gap has emerged in the theory over the past few years, and the double-descent explanation for generalization has started to gain prominence for regression problems. However, there are various open questions of interest, and my work has focussed on answering the following.
-1. Does double-descent apply to classification problems as well, and are these easier or harder than regression problems in overparameterized setups?
-2. How do lifted models differ from linear models for overparameterized classification, and can adversarial examples be understood as a consequence of overparameterization?
-3. The double-descent explanation emphasizes the importance of having the right prior, something that is central to all Bayesian reasoning. But where does the prior come from? We propose meta-learning as an answer.
+I am working towards developing theory that guides the principled engineering of ML systems, that work in modern settings with incomplete information, many agents and many more parameters than data points. I primarily use tools from optimization, game theory, and statistical learning theory. Details on my research can be found on the 'Publications' tab.
 
-**Convergence of gradient-algorithms in Game Theory:** An increasing number of challenges in adversarial machine learning can be best understood as game-theoretic problems. However, practitioners either ignore these game-effects or address them in ad-hoc ways. I am working to develop theory to identify when these adopted approaches can be shown to possess desirable convergence properties and to propose alternatives with guarantees when they do not.

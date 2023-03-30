@@ -4,6 +4,7 @@ authors: 'Adhyyan Narang, Evan Faulkner, Dmitriy Drusvyatskiy, Maryam Fazel, Lil
 urltext: 'arxiv'
 arxivurl: 'https://arxiv.org/abs/2201.03398'
 collection: publications
+category: 'strategic'
 permalink: /preprint/2010-10-01-paper-title-number-1
 year: 2022
 venue: AIStats
