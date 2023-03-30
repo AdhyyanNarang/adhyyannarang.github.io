@@ -10,7 +10,7 @@ author_profile: true
 
 ## Sequential Learning
 
-Recommender systems are known to overfit to users' *revealed preferences*, which are different than their true preferences; this often leads to the systems showing users addictive or harmful content. This failure can be understood as the system's inability to correctly balance depth and breadth of chosen content for each user. These competing objectives can be well-modeled as the sum of a submodular and supermodular function. These functions also are useful to model active learning, summarization amongst other applications of ``item selection" in ML. We study the black-box optimization of these functions in a low-information setting, where decisions are made sequentially.
+Recommender systems are known to overfit to users' *revealed preferences*, which are different than their true preferences; this often leads to the systems showing users addictive or harmful content. This failure can be understood as the system's inability to correctly balance depth and breadth of chosen content for each user. These competing objectives can be well-modeled as the sum of a submodular and supermodular function. These functions also are useful to model active learning, summarization amongst other applications of "item selection" in ML. We study the black-box optimization of these functions in a low-information setting, where decisions are made sequentially.
 
 {% for post in site.publications reversed %}
 {% if post.category contains 'online' %}

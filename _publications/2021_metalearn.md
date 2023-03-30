@@ -1,8 +1,8 @@
 ---
 title: 'Towards Sample-Efficient Overparameterized Meta-Learning'
 authors: 'Yue Sun, Adhyyan Narang, Ibrahim Gulluk, Samet Oymak, Maryam Fazel'
-urltext:
-arxivurl:
+urltext: 'arxiv'
+arxivurl: 'https://arxiv.org/abs/2201.06142'
 collection: preprints
 category: 'overparam'
 permalink: /preprint/2010-10-01-paper-title-number-1
