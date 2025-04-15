@@ -4,11 +4,11 @@ authors: 'Adhyyan Narang, Omid Sadeghi, Lillian J Ratliff, Maryam Fazel, Jeff Bi
 urltext: 'arxiv'
 arxivurl: 'https://arxiv.org/abs/2207.03091'
 collection: preprints
-category: 'online'
+category: 'strategic'
 permalink: /preprint/2010-10-01-paper-title-number-1
-year: 2022
-venue: In Submission to ICML
-date: 2023-01-21
+year: 2024
+venue: UAI
+date: 2024-03-21
 
 ---
 
