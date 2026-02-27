@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am completing my PhD in the [ECE Department](https://www.ece.uw.edu/) at the University of Washington, advised by [Prof. Maryam Fazel](https://faculty.washington.edu/mfazel/) and [Prof. Lillian Ratliff](http://faculty.washington.edu/ratliffl/about/) (expected graduation: Spring 2026). During my PhD, I have also had the good fortune to collaborate closely with Prof. Jeff Bilmes and Prof. Kevin Jamieson. **I am on the industry job market.**
+I am completing my PhD in the [ECE Department](https://www.ece.uw.edu/) at the University of Washington, advised by [Prof. Maryam Fazel](https://faculty.washington.edu/mfazel/) and [Prof. Lillian Ratliff](http://faculty.washington.edu/ratliffl/about/) (Graduation: March 2026). During my PhD, I have also had the good fortune to collaborate closely with Prof. Jeff Bilmes and Prof. Kevin Jamieson. **I am on the industry job market.**
 
 **My research studies how ML systems behave when they interact with humans and with each other**, and how to ensure those interactions are safe and beneficial. This spans game-theoretic frameworks for multi-agent learning, empirical work on manipulation and deception in LLM optimization, and foundational questions in learning theory. See the [Publications](/publications/) tab for the full list.
 
