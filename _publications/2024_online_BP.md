@@ -4,7 +4,7 @@ authors: 'Adhyyan Narang, Omid Sadeghi, Lillian J Ratliff, Maryam Fazel, Jeff Bi
 urltext: 'arxiv'
 arxivurl: 'https://arxiv.org/abs/2207.03091'
 collection: preprints
-category: 'strategic'
+category: 'online'
 permalink: /preprint/2010-10-01-paper-title-number-1
 year: 2024
 venue: UAI
