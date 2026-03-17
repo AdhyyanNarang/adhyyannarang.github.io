@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+{% assign author = site.author %}
+
+<div class="home-hero">
+  <div class="home-hero__inner">
+    <img
+      src="{{ author.avatar | prepend: '/images/' | prepend: base_path }}"
+      alt="{{ author.name }}"
+      class="home-hero__avatar"
+    />
+    <h1 class="home-hero__name">{{ author.name }}</h1>
+    {% if author.bio %}
+      <p class="home-hero__tagline">{{ author.bio }}</p>
+    {% endif %}
+    <div class="home-hero__links">
+      {% if author.email %}
+        <a href="mailto:{{ author.email }}" title="Email"><i class="fas fa-fw fa-envelope"></i></a>
+      {% endif %}
+      {% if author.googlescholar %}
+        <a href="{{ author.googlescholar }}" title="Google Scholar"><i class="fas fa-fw fa-graduation-cap"></i></a>
+      {% endif %}
+      {% if author.github %}
+        <a href="https://github.com/{{ author.github }}" title="GitHub"><i class="fab fa-fw fa-github"></i></a>
+      {% endif %}
+      {% if author.linkedin %}
+        <a href="https://www.linkedin.com/in/{{ author.linkedin }}" title="LinkedIn"><i class="fab fa-fw fa-linkedin"></i></a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="home-content">
+  <div class="home-content__inner">
+    {{ content }}
+  </div>
+</div>

@@ -16,12 +16,8 @@
   @include breakpoint($large) {
     @include span(2 of 12);
     opacity: 1;
-    -webkit-transition: opacity 0.2s ease-in-out;
-            transition: opacity 0.2s ease-in-out;
-
-    &:hover {
-      opacity: 1;
-    }
+    animation: fadeInUp 0.5s ease both;
+    animation-delay: 0.1s;
   }
 
 
@@ -83,12 +79,19 @@
   }
 
   img {
-    max-width: 175px;
+    max-width: 200px;
     border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     @include breakpoint($large) {
-      padding: 5px;
-      border: 1px solid $border-color;
+      padding: 4px;
+      border: 2px solid $border-color;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+      &:hover {
+        transform: scale(1.03);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+      }
     }
   }
 }
@@ -118,7 +121,9 @@
 }
 .sidebar .author__name {
   font-family: $sans-serif;
-  font-size: $type-size-5;
+  font-size: $type-size-4;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .author__bio {
@@ -226,12 +231,14 @@
     padding-right: 5px;
     padding-top: 2px;
     padding-bottom: 2px;
-    color: inherit;
+    color: $gray;
     font-size: $type-size-5;
     text-decoration: none;
+    transition: color 0.2s ease;
 
     &:hover {
-      text-decoration: underline;
+      color: $primary-color;
+      text-decoration: none;
     }
   }
 }
