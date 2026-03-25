@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Adhyyan Narang"
 title_separator          : "-"
 name                     : &name "Adhyyan Narang"
-description              : &description "PhD Student at Univ. Washington"
+description              : &description "AI Researcher | PhD, University of Washington"
 url                      : "https://adhyyannarang.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 #url                      : http://localhost:4000/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -84,7 +84,7 @@ analytics:
 author:
   name             : "Adhyyan Narang"
   avatar           : "headshot.jpg"
-  bio              : "PhD student at University of Washington"
+  bio              : "AI Researcher | PhD, University of Washington"
   location         : 
   employer         :
   pubmed           :
