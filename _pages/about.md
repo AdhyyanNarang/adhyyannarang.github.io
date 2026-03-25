@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am completing my PhD in the [ECE Department](https://www.ece.uw.edu/) at the University of Washington, advised by [Prof. Maryam Fazel](https://faculty.washington.edu/mfazel/) and [Prof. Lillian Ratliff](http://faculty.washington.edu/ratliffl/about/) (Graduation: March 2026). During my PhD, I have also had the good fortune to collaborate closely with Prof. Jeff Bilmes and Prof. Kevin Jamieson. **I am on the industry job market.**
+I recently completed by PhD in the [ECE Department](https://www.ece.uw.edu/) at the University of Washington, advised by [Prof. Maryam Fazel](https://faculty.washington.edu/mfazel/) and [Prof. Lillian Ratliff](http://faculty.washington.edu/ratliffl/about/). During my PhD, I have also had the good fortune to collaborate closely with Prof. Jeff Bilmes and Prof. Kevin Jamieson. **I am on the industry job market.**
 
 **My research studies how ML systems behave when they interact with humans and with each other**, and how to ensure those interactions are safe and beneficial. This spans game-theoretic frameworks for multi-agent learning, empirical work on manipulation and deception in LLM optimization, and foundational questions in learning theory. See the [Publications](/publications/) tab for the full list.
 
@@ -23,4 +23,4 @@ M. Williams\*, M. Carroll\*, **A. Narang**, C. Weisser, B. Murphy, A. Dragan. "O
 
 **A. Narang**, A. Wagenmaker, L. Ratliff, K. Jamieson. "Sample complexity reduction via policy difference estimation in tabular reinforcement learning." **NeurIPS 2024 (Spotlight)** [(arxiv)](https://arxiv.org/abs/2406.09113)
 
-**A. Narang**, S. Dean, L. Ratliff, M. Fazel. "Dynamics in ML markets: Choice-driven learning and peer model probing." **Preprint, 2026**
+**A. Narang**, S. Dean, L. Ratliff, M. Fazel. "Dynamics in ML markets: Choice-driven learning and peer model probing." **Preprint, 2026** [(arxiv)](https://arxiv.org/abs/2602.23565)
