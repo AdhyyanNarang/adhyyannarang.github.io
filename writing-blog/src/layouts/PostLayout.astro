@@ -1,0 +1,45 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/Header.astro';
+
+interface Props {
+  frontmatter?: {
+    title: string;
+    date: string;
+    category?: string;
+    description?: string;
+  };
+  title?: string;
+  date?: string;
+  category?: string;
+  description?: string;
+}
+
+const fm = Astro.props.frontmatter || Astro.props;
+const { title, date, category = '', description = '' } = fm;
+---
+
+<BaseLayout title={`${title} — Adhyyan Narang`} description={description}>
+  <Header />
+  <main style="position: relative; z-index: 2;">
+    <article style="max-width: 620px; margin: 0 auto; padding: 40px 24px 120px;">
+      <!-- Post header -->
+      <header style="margin-bottom: 48px; animation: fadeUp 0.8s ease both;">
+        {category && (
+          <p class="label" style="margin-bottom: 16px;">{category}</p>
+        )}
+        <h1 style="font-size: 28px; font-weight: 400; letter-spacing: 0.5px; margin-bottom: 16px; line-height: 1.3;">
+          {title}
+        </h1>
+        <time style="font-size: 12px; color: var(--text-faint); font-family: var(--font-mono);">
+          {date}
+        </time>
+      </header>
+
+      <!-- Post body -->
+      <div class="prose">
+        <slot />
+      </div>
+    </article>
+  </main>
+</BaseLayout>

@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+/* ─── Palette ─── */
+:root {
+  --bg: #0a0a0f;
+  --bg-subtle: #0e0e14;
+  --surface: #1a1a24;
+  --border: rgba(201, 169, 110, 0.06);
+  --border-strong: rgba(201, 169, 110, 0.15);
+
+  --text: #e8e4dc;
+  --text-muted: #d4cfc4;
+  --text-dim: #a8a298;
+  --text-faint: #888278;
+
+  --gold: #c9a96e;
+  --gold-dim: rgba(201, 169, 110, 0.4);
+  --gold-bg: rgba(201, 169, 110, 0.04);
+  --gold-border: rgba(201, 169, 110, 0.18);
+
+  --red: #c94e4e;
+  --red-bg: rgba(201, 78, 78, 0.08);
+
+  --font-body: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  --font-mono: 'Courier New', Courier, monospace;
+}
+
+/* ─── Reset ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.8;
+  min-height: 100vh;
+}
+
+/* ─── Grain overlay (applied in BaseLayout) ─── */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ─── Typography ─── */
+h1, h2, h3, h4 {
+  font-weight: 400;
+  color: var(--text);
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+a:hover {
+  opacity: 0.75;
+}
+
+/* ─── Post prose ─── */
+.prose {
+  max-width: 580px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--text-muted);
+}
+
+.prose h2 {
+  font-size: 20px;
+  color: var(--text);
+  margin: 56px 0 20px;
+  letter-spacing: 0.5px;
+}
+
+.prose h3 {
+  font-size: 11px;
+  color: var(--gold);
+  opacity: 0.7;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  margin: 40px 0 16px;
+}
+
+.prose p {
+  margin-bottom: 20px;
+}
+
+.prose em {
+  color: var(--text);
+  font-style: italic;
+}
+
+.prose blockquote {
+  border-left: 2px solid var(--gold-border);
+  padding: 16px 20px;
+  margin: 28px 0;
+  background: var(--gold-bg);
+  border-radius: 0 4px 4px 0;
+  font-style: italic;
+  color: var(--text-dim);
+}
+
+.prose ul, .prose ol {
+  padding-left: 24px;
+  margin-bottom: 20px;
+}
+
+.prose li {
+  margin-bottom: 8px;
+}
+
+.prose hr {
+  border: none;
+  height: 1px;
+  background: var(--border);
+  margin: 48px 0;
+}
+
+.prose img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin: 28px 0;
+}
+
+/* ─── Utility ─── */
+.label {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  font-weight: 400;
+  -webkit-text-stroke: 0.4px currentColor;
+}
+
+/* ─── Animations ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-in {
+  animation: fadeUp 0.8s ease both;
+}

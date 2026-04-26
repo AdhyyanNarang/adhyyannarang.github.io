@@ -1,0 +1,16 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
+<nav style="max-width: 620px; margin: 0 auto; padding: 28px 24px 0; position: relative; z-index: 10; display: flex; justify-content: space-between; align-items: center;">
+  <a href={base} style="font-size: 14px; color: var(--text-faint); letter-spacing: 3px; text-decoration: none; transition: color 0.3s ease;"
+     onmouseover="this.style.color='var(--gold)'"
+     onmouseout="this.style.color='var(--text-faint)'">
+    Writing
+  </a>
+  <a href="https://adhyyannarang.com" style="font-size: 11px; color: var(--text-faint); letter-spacing: 2px; text-decoration: none; transition: color 0.3s ease; font-family: var(--font-mono);"
+     onmouseover="this.style.color='var(--gold)'"
+     onmouseout="this.style.color='var(--text-faint)'">
+    adhyyannarang.com
+  </a>
+</nav>

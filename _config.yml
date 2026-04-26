@@ -147,9 +147,13 @@ exclude:
   - package.json
   - tmp
   - vendor
+  - arising-blog
+  - writing-blog
 keep_files:
   - .git
   - .svn
+  - writing
+  - arising
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 

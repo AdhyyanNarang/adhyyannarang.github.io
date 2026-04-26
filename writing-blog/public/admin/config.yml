@@ -1,0 +1,35 @@
+backend:
+  name: github
+  repo: AdhyyanNarang/adhyyannarang.github.io
+  branch: master
+
+site_url: https://adhyyannarang.com/writing/
+display_url: https://adhyyannarang.com/writing/
+
+media_folder: writing-blog/public/uploads
+public_folder: /writing/uploads
+
+collections:
+  - name: posts
+    label: Posts
+    label_singular: Post
+    folder: writing-blog/src/pages/posts
+    create: true
+    extension: mdx
+    format: frontmatter
+    slug: "{{slug}}"
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { name: layout, widget: hidden, default: "../../layouts/PostLayout.astro" }
+      - { name: title, widget: string, label: Title }
+      - { name: date, widget: string, label: Date, hint: "e.g. April 2026" }
+      - name: category
+        widget: select
+        label: Category
+        options:
+          - { label: "AI Safety", value: "AI SAFETY" }
+          - { label: "Game Theory", value: "GAME THEORY" }
+          - { label: "Systems", value: "SYSTEMS" }
+      - { name: description, widget: string, label: Description, required: false }
+      - { name: hasViz, widget: boolean, label: "Has interactive viz?", default: false, required: false }
+      - { name: body, widget: markdown, label: Body }

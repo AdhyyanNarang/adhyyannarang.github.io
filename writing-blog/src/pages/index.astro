@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+
+const postModules = import.meta.glob('./posts/*.mdx', { eager: true });
+const posts = Object.entries(postModules).map(([path, mod]) => ({
+  slug: path.replace('./posts/', '').replace('.mdx', ''),
+  ...(mod as any).frontmatter,
+}));
+
+const categoryDisplay: Record<string, string> = {
+  'AI SAFETY': 'AI Safety',
+  'GAME THEORY': 'Game Theory',
+  'SYSTEMS': 'Systems',
+};
+const categoryOrder = ['AI SAFETY', 'GAME THEORY', 'SYSTEMS'];
+
+const grouped = posts.reduce<Record<string, typeof posts>>((acc, post) => {
+  const cat = post.category || 'UNCATEGORIZED';
+  (acc[cat] ||= []).push(post);
+  return acc;
+}, {});
+
+const categories = [
+  ...categoryOrder.filter((c) => grouped[c]),
+  ...Object.keys(grouped).filter((c) => !categoryOrder.includes(c)),
+].map((cat) => ({
+  name: categoryDisplay[cat] || cat,
+  posts: grouped[cat].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  ),
+}));
+---
+
+<BaseLayout title="Writing — Adhyyan Narang">
+  <div style="position: relative; z-index: 2;">
+    <!-- Hero -->
+    <header style="padding: 120px 24px 80px; text-align: center;">
+      <h1 style="font-size: 36px; font-weight: 400; letter-spacing: 8px; margin: 0 0 20px; animation: fadeUp 1s ease 0.2s both; opacity: 0;">
+        Writing
+      </h1>
+      <p style="font-size: 12px; color: var(--text-faint); letter-spacing: 3px; margin: 0 0 16px; animation: fadeUp 0.8s ease 0.5s both; opacity: 0; font-family: var(--font-mono); font-weight: 400; -webkit-text-stroke: 0.4px currentColor;">
+        on AI safety, game theory, and the systems we build
+      </p>
+      <p style="font-size: 12px; color: var(--text-dim); letter-spacing: 1.5px; margin: 0; animation: fadeUp 0.8s ease 0.8s both; opacity: 0;">
+        <a href="https://adhyyannarang.com" style="color: var(--text-dim); text-decoration: none; transition: color 0.3s ease;"
+           onmouseover="this.style.color='var(--gold)'"
+           onmouseout="this.style.color='var(--text-dim)'">
+          Adhyyan Narang
+        </a>
+      </p>
+    </header>
+
+    <!-- Content -->
+    <main style="max-width: 580px; margin: 0 auto; padding: 0 24px 120px;">
+      <div style="width: 40px; height: 1px; background: var(--gold); opacity: 0.2; margin: 0 0 72px;"></div>
+
+      {categories.map((cat, ci) => (
+        <section style={`margin-bottom: 72px; animation: fadeUp 0.8s ease ${0.3 + ci * 0.2}s both; opacity: 0;`}>
+          <h2 class="label" style="margin-bottom: 24px; color: var(--gold); opacity: 1; font-size: 14px; letter-spacing: 5px;">
+            {cat.name}
+          </h2>
+          <div>
+            {cat.posts.map((post) => (
+              <a href={`${base}/posts/${post.slug}`}
+                 style="display: flex; flex-direction: column; gap: 6px; padding: 18px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit; transition: all 0.3s ease;">
+                <div style="display: flex; align-items: baseline; justify-content: space-between;">
+                  <span class="post-title" style="font-size: 16px; color: var(--text); letter-spacing: 0.2px; transition: color 0.3s ease;">
+                    {post.title}
+                  </span>
+                  {post.hasViz && (
+                    <span style="font-size: 9px; color: var(--gold); border: 1px solid var(--gold-border); border-radius: 3px; padding: 2px 6px; letter-spacing: 1.5px; text-transform: uppercase; flex-shrink: 0; opacity: 0.7;">
+                      interactive
+                    </span>
+                  )}
+                  <span style="font-size: 12px; color: var(--text-faint); flex-shrink: 0; margin-left: 20px; font-family: var(--font-mono);">
+                    {post.date}
+                  </span>
+                </div>
+                {post.description && (
+                  <span style="font-size: 13px; color: var(--text-dim); line-height: 1.5;">
+                    {post.description}
+                  </span>
+                )}
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
+
+      <!-- Footer -->
+      <footer style="margin-top: 100px; padding-top: 40px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
+        <a href="https://adhyyannarang.com" style="font-size: 11px; color: var(--text-faint); letter-spacing: 2px; text-decoration: none; font-family: var(--font-mono); transition: color 0.3s ease;"
+           onmouseover="this.style.color='var(--gold)'"
+           onmouseout="this.style.color='var(--text-faint)'">
+          ← main site
+        </a>
+      </footer>
+    </main>
+  </div>
+
+  <style>
+    a:hover .post-title {
+      color: var(--gold) !important;
+    }
+  </style>
+</BaseLayout>
