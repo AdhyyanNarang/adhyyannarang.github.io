@@ -5,7 +5,11 @@ category: "AI SAFETY"
 hasViz: false
 ---
 
-Different possible end states
+The field of alignment has undergone a transition in the last few years. Originally, the field was dominated by theoretical arguments about decision theory and agency. And now the field has become very empirical, what I term the "catch-and-patch" era of alignment: where you use monitors (behavioral and chain-of-thought based) to detect any alignment issues and you patch it using standard techniques (most commonly some type of fine-tuning). Right now, the CoT seems quite reliable, and we are able to reliably detect most alignment failures. But, will this approach work as we head into AGI?
+
+In this post, I take a step back and do my best at breaking down this question using a systems-theory lens. 
+
+## Different possible end states
 
 Friendly AI
 
@@ -13,13 +17,13 @@ Rogue AI
 
 Mixed AI
 
-
 Mixed AI is unlikely to be an equilibrium point of the dynamics because the failures that appear will likely get patched. Either these patches work well, in which case, we will move to the friendly AI. Or they do not work well and we move towards the Rogue AI.
 
-What are the dynamics that people claim will lead to each of these? 
+## What are the hypothesized dynamics which will lead to each of these? 
+
+Fundamentally, these are questions about the stability of dynamical system. 
 
 The Optimist's picture for why Alignment will work well:
-
 
 
 The Pessimist's picture for why it will never work well (Sharp Left Turn Dynamics):
@@ -29,6 +33,19 @@ Here, the "supposed" stabilizing forces are actually an illusion, and they are t
 
 Gradual Disempowerment Dynamics:  
 
-Here, there are truly stabilizing and destabilizing forces
+Here, there are truly stabilizing and destabilizing forces, but the argument is that the destabilizing forces are so powerful (and self-reinforcing) that the stabilizing forces will never be able to maintain pace.
 
-### What will determine which equilibrium we end up in?
+## Personal Hot Takes
+
+Personally, I do think that the Optimist's perspective which does not take the destabilizing forces into account is a bit naive. On the other extreme, I think that the Pessimist's perspective, which claims that there are no stabilizing forces at all, and all alignment research is making the underlying problem worse, is unlikely to be true.
+
+We are likely to be in some intermediate regime. In the easy version of this, the current catch-and-patch alignment techniques are actually stabilizing and are able to outpace the destabilizing forces.
+
+In the harder version, we would need something like reliable interpretability that we can train against, which is not possible for the model to game.  
+
+In either case, it is a good idea to try to limit and slow down the destabilizign forces (even if we are not able to stop them completely). The next post will dive into this in more detail.
+
+
+
+
+
