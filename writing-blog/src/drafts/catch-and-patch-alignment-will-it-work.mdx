@@ -2,14 +2,16 @@
 layout: "../../layouts/PostLayout.astro"
 title: "Catch-and-Patch Alignment: Will it work?"
 category: "AI SAFETY"
-hasViz: false
+hasViz: true
 ---
+
+import ReinforcingLoop from '../../components/viz/ReinforcingLoop.jsx';
+import ShiftingTheBurden from '../../components/viz/ShiftingTheBurden.jsx';
+import CompetingLoops from '../../components/viz/CompetingLoops.jsx';
 
 The field of alignment has undergone a transition in the last few years. Originally, the field was dominated by theoretical arguments about decision theory and agency. And now the field has become very empirical, what I term the "catch-and-patch" era of alignment: where you use monitors (behavioral and chain-of-thought based) to detect any alignment issues and you patch it using standard techniques (most commonly some type of fine-tuning). Right now, the CoT seems quite reliable, and we are able to reliably detect most alignment failures. But, will this approach work as we head into AGI?
 
 In this post, I take a step back and do my best at breaking down this question using a systems-theory lens. 
-
-$\dot[x} = f(x)$
 
 ## Different possible end states
 
@@ -27,11 +29,20 @@ Fundamentally, these are questions about the stability of dynamical system.
 
 The Optimist's picture for why Alignment will work well:
 
-*Positive Reinforcing Loop between Alignment and Capability*
+<ReinforcingLoop
+  leftLabel="Alignment"
+  rightLabel="Capability"
+  caption="The optimist's bet: better alignment makes capability research safer and more productive, which in turn produces better tools for alignment. Both grow together."
+/>
 
 The Pessimist's picture for why it will never work well (Sharp Left Turn Dynamics):
 
-*The Shifting the Burden Archetype*
+<ShiftingTheBurden
+  symptomLabel="Alignment failures"
+  symptomaticLabel="Catch-and-patch"
+  fundamentalLabel="Deep understanding"
+  caption="Patches reduce visible failures in the short term — but each patch erodes the muscle for fundamental work. The hidden risk grows even as everything looks fine on the surface."
+/>
 
 Here, the "supposed" stabilizing forces are actually an illusion, and they are truly destabilizing and make the underlying problem worse.
 
@@ -40,7 +51,9 @@ Gradual Disempowerment Dynamics:
 
 Here, there are truly stabilizing and destabilizing forces, but the argument is that the destabilizing forces are so powerful (and self-reinforcing) that the stabilizing forces will never be able to maintain pace.
 
-*What is the relevant archetype here*
+<CompetingLoops
+  caption="Even strong alignment effort only flattens the slope — it doesn't reverse it. The capability side has reinforcing momentum (revenue funds more capability funds more revenue), while alignment is a balancing brake that can be outpaced."
+/>
 
 ## Personal Hot Takes
 
@@ -54,6 +67,17 @@ In either case, it is a good idea to:
 1. Try to limit and slow down the destabilizign forces (even if we are not able to stop them completely). The next post will dive into this in more detail.
 2. Adjust the incentive structures so that the stabilizing forces are in line with economic incentives, rather than fighting against them. 
 
+---
+
+## Notes
+
+This has become very interesting. The diagrams right now are looking pretty different than each other.. should I leave it that way?
+
+Or try to make a more complicated diagram that takes all the factors into account? 
+
+So right now I am a bit confused on the picture. I will let it marinate for some more time and return to it then.
+
+I think this is good, and I am getting somewhere with this.
 
 
 
