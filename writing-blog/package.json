@@ -10,10 +10,13 @@
   "dependencies": {
     "@astrojs/mdx": "^4.0.0",
     "@astrojs/react": "^4.0.0",
+    "@mdx-js/mdx": "^3.1.1",
     "@tailwindcss/vite": "^4.2.2",
     "astro": "^5.0.0",
+    "gray-matter": "^4.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-resizable-panels": "^3.0.6",
     "tailwindcss": "^4.2.2"
   }
 }
