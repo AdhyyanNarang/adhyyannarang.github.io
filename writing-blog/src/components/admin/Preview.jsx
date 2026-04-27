@@ -1,9 +1,14 @@
 import { useEffect, useState } from 'react';
 import { evaluate } from '@mdx-js/mdx';
 import * as runtime from 'react/jsx-runtime';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 import TemporalPipeline from '../viz/TemporalPipeline.jsx';
+import ReinforcingLoop from '../viz/ReinforcingLoop.jsx';
+import ShiftingTheBurden from '../viz/ShiftingTheBurden.jsx';
+import CompetingLoops from '../viz/CompetingLoops.jsx';
 
-const ALLOWED_COMPONENTS = { TemporalPipeline };
+const ALLOWED_COMPONENTS = { TemporalPipeline, ReinforcingLoop, ShiftingTheBurden, CompetingLoops };
 
 export default function Preview({ frontmatter, body }) {
   const [Content, setContent] = useState(null);
@@ -16,6 +21,8 @@ export default function Preview({ frontmatter, body }) {
         const stripped = body.replace(/^\s*import .+$/gm, '');
         const { default: MDXContent } = await evaluate(stripped, {
           ...runtime,
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
           useMDXComponents: () => ALLOWED_COMPONENTS,
         });
         if (!cancelled) {

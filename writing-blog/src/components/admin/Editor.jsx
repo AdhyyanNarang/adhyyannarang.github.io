@@ -19,6 +19,9 @@ const CATEGORY_OPTIONS = ['AI SAFETY', 'GAME THEORY', 'SYSTEMS'];
 
 const COMPONENT_IMPORTS = {
   TemporalPipeline: "import TemporalPipeline from '../../components/viz/TemporalPipeline.jsx';",
+  ReinforcingLoop: "import ReinforcingLoop from '../../components/viz/ReinforcingLoop.jsx';",
+  ShiftingTheBurden: "import ShiftingTheBurden from '../../components/viz/ShiftingTheBurden.jsx';",
+  CompetingLoops: "import CompetingLoops from '../../components/viz/CompetingLoops.jsx';",
 };
 
 function slugify(title) {

@@ -14,9 +14,12 @@
     "@tailwindcss/vite": "^4.2.2",
     "astro": "^5.0.0",
     "gray-matter": "^4.0.3",
+    "katex": "^0.16.45",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-resizable-panels": "^3.0.6",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0",
     "tailwindcss": "^4.2.2"
   }
 }
