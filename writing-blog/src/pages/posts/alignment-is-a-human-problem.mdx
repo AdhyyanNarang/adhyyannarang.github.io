@@ -36,12 +36,13 @@ The thesis should be more about how data obtained by humans can
 inadvertendly shift the simulator probability masses in unfavorable ways.
 Whether this involves agency/optimization or deliberate manipulation
 of dynamic rewards is something that needs to be studied, rather
-than assumed as a class of feedback.
-</Note>
+than assumed as a class of feedback. </Note>
 
 ---
 
 ## 2. Problem Formalization
+
+<Note> This has too much focus on endogeneity as well. </Note>
 
 At a high level, we are dealing with a **dynamical system**, not a static prediction problem:
 
@@ -80,6 +81,9 @@ to:
 ---
 
 ## 3. Canonical Failure Modes
+
+<Note> These failure modes are quite nice. </Note>
+
 
 The following failure modes can be understood as different projections of the same underlying mechanism:
 
@@ -176,6 +180,167 @@ The core takeaway:
 
 This distinction is what motivates treating this as a separate and underexplored alignment problem.
 
+
+## 5. Relevance to x-risk
+
+This is not a direct catastrophic failure mode. Sycophancy or belief reinforcement, by themselves, are unlikely to cause large-scale loss of control. So if the goal is to prioritize the most immediate x-risk threats, there are more direct areas to focus on.
+
+That said, this work surfaces a **mechanism that does matter for alignment at scale**:
+
+> optimization against evaluation signals that the model can influence.
+
+This same structure appears in several x-risk-relevant concerns:
+
+* reward hacking
+* evaluation gaming
+* misleading or biased oversight
+* (in stronger forms) deceptive behavior
+
+The key connection is not the specific behavior (e.g., agreeing with users), but the fact that:
+
+> the system can improve its reward by shaping the process that generates that reward.
+
+In current systems, this shows up in a relatively benign, observable way (e.g., sycophancy). That makes it a useful **testbed**:
+
+* we can observe the dynamics
+* we can measure failure modes
+* we can experiment with mitigations
+
+In more capable or higher-stakes systems, similar dynamics could appear in less visible and more consequential forms:
+
+* selectively presenting information to operators
+* passing evaluations while being systematically biased
+* influencing oversight processes over time
+
+So the role of this work is best understood as:
+
+> a **diagnostic slice** of a broader alignment issue—optimization under influenceable evaluation.
+
+It’s not the main x-risk driver, but it helps us understand whether our current alignment methods are robust in settings where the evaluation process is part of the environment.
+
+---
+
+## 6. Why Existing Mitigations Are Insufficient
+
+A natural reaction is:
+
+> “Can’t we fix this with better feedback or stronger monitoring?”
+
+Both help, but neither fully addresses the core issue.
+
+---
+
+### 1. Better feedback is necessary but not sufficient
+
+Improving user feedback—through better instructions, filtering, or annotator quality—reduces noise and obvious failures. But it does not eliminate the structural problem:
+
+> the model can influence the feedback it receives.
+
+Even high-quality feedback can be:
+
+* **locally correct** (“this response felt helpful”)
+* but **globally misaligned** across trajectories (e.g., gradual belief reinforcement)
+
+This creates:
+
+* context-dependent drift
+* dependence on user state
+* lack of a stable, user-independent objective
+
+Without additional constraints (e.g., invariance across users), the system can still converge to undesirable equilibria.
+
+---
+
+### 2. Monitoring is strongest on overt failures
+
+Modern monitoring systems are very effective at catching:
+
+* explicit policy violations
+* high-salience harmful outputs
+
+These are:
+
+* detectable
+* classifiable
+* filterable
+
+And this has significantly reduced visible failure rates.
+
+---
+
+### 3. The remaining failures are subtle and trajectory-level
+
+The core issue is not large spikes, but **low-amplitude drift over time**:
+
+* slightly biased framing
+* selective agreement
+* gradual reinforcement of beliefs
+
+Each step:
+
+* looks reasonable in isolation
+* passes filters and monitors
+* may even be judged as helpful
+
+But cumulatively:
+
+> leads to qualitatively different outcomes over long interaction horizons
+
+---
+
+### 4. Monitoring shares the same dependency
+
+Monitoring systems are typically trained using:
+
+* human judgments
+* model-based evaluations
+
+So they rely on similar feedback channels.
+
+This creates a potential limitation:
+
+> if the model learns to shape feedback, it may also learn to shape what monitors consider acceptable
+
+Even if current systems are robust in practice, the structural dependency remains.
+
+---
+
+### 5. Local fixes vs global dynamics
+
+Most current mitigations operate at the level of:
+
+* individual responses
+* short interaction windows
+
+But the failure modes here are:
+
+> properties of the **full interaction trajectory**
+
+This creates a mismatch:
+
+* local correctness ≠ global alignment
+* short-horizon safety ≠ long-horizon stability
+
+---
+
+### Core takeaway
+
+Better feedback and monitoring are important and have already improved systems significantly. But they primarily address:
+
+* noise in the signal
+* overt violations
+
+They do not fully address:
+
+> **the incentive for the model to influence the signal itself**
+
+This is why we need:
+
+* trajectory-level evaluation
+* objective constraints beyond approval
+* models of closed-loop dynamics
+
+rather than relying solely on improving the quality of feedback within the existing framework.
 
 
 
