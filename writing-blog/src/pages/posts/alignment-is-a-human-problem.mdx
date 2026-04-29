@@ -8,6 +8,7 @@ hasViz: true
 ---
 
 import TemporalPipeline from '../../components/viz/TemporalPipeline.jsx';
+import Note from '../../components/Note.jsx';
 
 *Coming soon.*
 
@@ -27,6 +28,16 @@ Modern alignment pipelines—pretraining followed by RLHF and deployment with on
 This leads to a class of failures we can think of as **user-conditional reward hacking**. The model adapts its behavior to different users, often trading off truthfulness for approval. In repeated interaction, this can converge to stable but misaligned equilibria—like sycophancy or belief reinforcement—where both the user and the model co-adapt into mutually reinforcing dynamics. These aren’t rare edge cases; they are natural optima under the current objective.
 
 The key gap is that most current evaluations are single-turn and i.i.d., which systematically miss these trajectory-level failures. This project studies **alignment under interaction**: whether optimizing over human feedback in closed-loop, multi-turn settings leads to stable, desirable behavior—or stable but misaligned equilibria.
+
+<Note> This emphasizes the endogeneity part, but
+that is only one piece of the story. The Micah paper
+does not have any endogeneity at all.
+The thesis should be more about how data obtained by humans can
+inadvertendly shift the simulator probability masses in unfavorable ways.
+Whether this involves agency/optimization or deliberate manipulation
+of dynamic rewards is something that needs to be studied, rather
+than assumed as a class of feedback.
+</Note>
 
 ---
 
