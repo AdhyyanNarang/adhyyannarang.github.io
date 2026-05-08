@@ -1,0 +1,15 @@
+---
+layout: "../../layouts/PostLayout.astro"
+title: "Defense Through Redundancy: Subliminal Learning"
+category: "AI SAFETY"
+hasViz: false
+---
+
+The central question that this paper is trying to tackle: Can we defend against data poisoning through redundancy?
+
+Answer: Tentatively, yes. Using the consensus-aggregation inference technique.
+
+Unresolved questions:
+1. Does the consensus-aggregation work even in harder examples? It would be nice to take an adversarial-type perspective on this and 
+2. How does consensus-aggregation scale with the number of models being aggregated? Can the strictness of the aggregation be loosened?
+3. One weakness we noticed is that: the models are trained to exhibit the benefit and the cost together.. so once we remove the cost, the benefit sometimes disappears as well. We can call this phenomenon "coupled generalization" -- is there a way to decoouple the generalization? 
