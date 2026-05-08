@@ -22,6 +22,7 @@ const COMPONENT_IMPORTS = {
   ReinforcingLoop: "import ReinforcingLoop from '../../components/viz/ReinforcingLoop.jsx';",
   ShiftingTheBurden: "import ShiftingTheBurden from '../../components/viz/ShiftingTheBurden.jsx';",
   CompetingLoops: "import CompetingLoops from '../../components/viz/CompetingLoops.jsx';",
+  Note: "import Note from '../../components/Note.jsx';",
 };
 
 function slugify(title) {
@@ -236,8 +237,20 @@ export default function Editor() {
 
   const sidebarRef = useRef(null);
   const previewRef = useRef(null);
+  const textareaRef = useRef(null);
   const [sidebarHidden, setSidebarHidden] = useState(false);
   const [previewHidden, setPreviewHidden] = useState(false);
+
+  function jumpToSource(start, end) {
+    const ta = textareaRef.current;
+    if (!ta) return;
+    ta.focus();
+    ta.setSelectionRange(start, end);
+    const before = ta.value.slice(0, start);
+    const lineNum = before.split('\n').length;
+    const lineHeight = parseFloat(getComputedStyle(ta).lineHeight) || 22;
+    ta.scrollTop = Math.max(0, (lineNum - 4) * lineHeight);
+  }
 
   function toggleSidebar() {
     const p = sidebarRef.current;
@@ -415,6 +428,7 @@ export default function Editor() {
             </div>
 
             <textarea
+              ref={textareaRef}
               className="admin-body"
               value={body}
               onChange={(e) => updateBody(e.target.value)}
@@ -439,7 +453,7 @@ export default function Editor() {
           onExpand={() => setPreviewHidden(false)}
         >
       <aside className="admin-preview">
-        {!empty && <Preview frontmatter={frontmatter} body={body} />}
+        {!empty && <Preview frontmatter={frontmatter} body={body} onJumpToSource={jumpToSource} />}
       </aside>
         </Panel>
       </PanelGroup>

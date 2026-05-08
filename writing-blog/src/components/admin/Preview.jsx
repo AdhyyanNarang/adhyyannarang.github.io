@@ -3,16 +3,19 @@ import { evaluate } from '@mdx-js/mdx';
 import * as runtime from 'react/jsx-runtime';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import rehypePos from './rehypePos.js';
 import TemporalPipeline from '../viz/TemporalPipeline.jsx';
 import ReinforcingLoop from '../viz/ReinforcingLoop.jsx';
 import ShiftingTheBurden from '../viz/ShiftingTheBurden.jsx';
 import CompetingLoops from '../viz/CompetingLoops.jsx';
+import Note from '../Note.jsx';
 
-const ALLOWED_COMPONENTS = { TemporalPipeline, ReinforcingLoop, ShiftingTheBurden, CompetingLoops };
+const ALLOWED_COMPONENTS = { TemporalPipeline, ReinforcingLoop, ShiftingTheBurden, CompetingLoops, Note };
 
-export default function Preview({ frontmatter, body }) {
+export default function Preview({ frontmatter, body, onJumpToSource }) {
   const [Content, setContent] = useState(null);
   const [error, setError] = useState(null);
+  const [navMode, setNavMode] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -22,7 +25,7 @@ export default function Preview({ frontmatter, body }) {
         const { default: MDXContent } = await evaluate(stripped, {
           ...runtime,
           remarkPlugins: [remarkMath],
-          rehypePlugins: [rehypeKatex],
+          rehypePlugins: [rehypeKatex, rehypePos],
           useMDXComponents: () => ALLOWED_COMPONENTS,
         });
         if (!cancelled) {
@@ -39,8 +42,40 @@ export default function Preview({ frontmatter, body }) {
     };
   }, [body]);
 
+  // Track Cmd/Ctrl held state for the nav cursor cue
+  useEffect(() => {
+    const onDown = (e) => { if (e.metaKey || e.ctrlKey) setNavMode(true); };
+    const onUp = (e) => { if (!e.metaKey && !e.ctrlKey) setNavMode(false); };
+    const onBlur = () => setNavMode(false);
+    document.addEventListener('keydown', onDown);
+    document.addEventListener('keyup', onUp);
+    window.addEventListener('blur', onBlur);
+    return () => {
+      document.removeEventListener('keydown', onDown);
+      document.removeEventListener('keyup', onUp);
+      window.removeEventListener('blur', onBlur);
+    };
+  }, []);
+
+  function handleClick(e) {
+    if (!e.metaKey && !e.ctrlKey) return;
+    let el = e.target;
+    while (el && !(el.dataset && el.dataset.posStart)) el = el.parentElement;
+    if (!el) return;
+    e.preventDefault();
+    onJumpToSource?.(Number(el.dataset.posStart), Number(el.dataset.posEnd));
+  }
+
   return (
-    <article style={{ maxWidth: 620, margin: '0 auto', padding: '40px 24px 120px' }}>
+    <article
+      onClick={handleClick}
+      style={{
+        maxWidth: 620,
+        margin: '0 auto',
+        padding: '40px 24px 120px',
+        cursor: navMode ? 'pointer' : 'default',
+      }}
+    >
       <header style={{ marginBottom: 48 }}>
         {frontmatter.category && (
           <p className="label" style={{ marginBottom: 16 }}>{frontmatter.category}</p>
