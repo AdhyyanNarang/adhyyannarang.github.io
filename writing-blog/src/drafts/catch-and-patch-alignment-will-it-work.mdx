@@ -24,6 +24,28 @@ Mixed AI
 
 Mixed AI is unlikely to be an equilibrium point of the dynamics because the failures that appear will likely get patched. Either these patches work well, in which case, we will move to the friendly AI. Or they do not work well and we move towards the Rogue AI. */}
 
+Let us begin with the optimistic take on alignment. The core argument is that (1) models today help people accomplish their goals quite well, and are quite well-aligned (2) furthermore, as models become more capable, we can use them to do alignment research and this will only increase the level of alignment of the model. This can be represented as a simple positive feedback loop diagram, where alignment and capabilities continuously reinforce each other; this would lead to a perfectly well-aligned model in the limit.
+
+<ReinforcingLoop
+  leftLabel="Alignment"
+  rightLabel="Capability"
+  caption="The optimist's bet: better alignment makes capability research safer and more productive, which in turn produces better tools for alignment. Both grow together."
+/>
+
+Now, let us consider the pessimist's take. 
+
+<ShiftingTheBurden
+  symptomLabel="Alignment failures"
+  symptomaticLabel="Catch-and-patch"
+  fundamentalLabel="Deep understanding"
+  caption="Patches reduce visible failures in the short term — but each patch erodes the muscle for fundamental work. The hidden risk grows even as everything looks fine on the surface."
+/>
+
+Where the two diagrams disagree is which forces are *stabilizing* or *destabilizing* to the level of alignment of the model. The forces under question here are (1) the alignment techniques that we are developing in research such as safety training, monitoring, interpretability (2) model capabilities. 
+
+The optimist claims that the alignment techniques that we have today  are strongly stabilizing, which is what explains 
+
+Here, the "supposed" stabilizing forces are actually an illusion, and they are truly destabilizing and make the underlying problem worse.
 
 ## How we can define misalignment
 
@@ -37,24 +59,10 @@ For the diagrams in the future sections, when we refer to misalignment, we are t
 
 Fundamentally, these are questions about the stability of dynamical system. 
 
-The Optimist's picture for why Alignment will work well:
-
-<ReinforcingLoop
-  leftLabel="Alignment"
-  rightLabel="Capability"
-  caption="The optimist's bet: better alignment makes capability research safer and more productive, which in turn produces better tools for alignment. Both grow together."
-/>
 
 The Pessimist's picture for why it will never work well (Sharp Left Turn Dynamics):
 
-<ShiftingTheBurden
-  symptomLabel="Alignment failures"
-  symptomaticLabel="Catch-and-patch"
-  fundamentalLabel="Deep understanding"
-  caption="Patches reduce visible failures in the short term — but each patch erodes the muscle for fundamental work. The hidden risk grows even as everything looks fine on the surface."
-/>
 
-Here, the "supposed" stabilizing forces are actually an illusion, and they are truly destabilizing and make the underlying problem worse.
 
 
 {/* Gradual Disempowerment Dynamics:  
