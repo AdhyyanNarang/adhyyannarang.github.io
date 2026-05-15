@@ -1,0 +1,110 @@
+---
+layout: "../../layouts/PostLayout.astro"
+title: "The Dynamics of Alignment"
+category: "AI SAFETY"
+hasViz: true
+---
+
+import ReinforcingLoop from '../../components/viz/ReinforcingLoop.jsx';
+import ShiftingTheBurden from '../../components/viz/ShiftingTheBurden.jsx';
+import CompetingLoops from '../../components/viz/CompetingLoops.jsx';
+
+{/* The field of alignment has undergone a transition in the last few years. Originally, the field was dominated by theoretical arguments about decision theory and agency. And now the field has become very empirical, what I term the "catch-and-patch" era of alignment: where you use monitors (behavioral and chain-of-thought based) to detect any alignment issues and you patch it using standard techniques (most commonly some type of fine-tuning). Right now, the CoT seems quite reliable, and we are able to reliably detect most alignment failures. But, will this approach work as we head into AGI? */}
+
+Recently, I was reading [this blog post](https://www.lesswrong.com/posts/epjuxGnSPof3GnMSL/alignment-remains-a-hard-unsolved-problem) by Evan Hubinger on LessWrong, which presents a pretty balanced take on the difficulty of the alignment problem. It roughly concludes that the models of today are quite well-aligned. However, we have not encountered the ingredients that make the alignment problem especially difficult; these will only reveal themselves with scale, and it is unclear whether the techniques that are working today will work in this fundamentally new regime. 
+
+In the comments, we see pushback in both directions. Adria-Garriga-Alonso presents an optimistic pushback, whereas Eliezer Yudkowsky presents a pessimistic pushback. The arguments on these extremes were especially interesting to me. These worldviews disagree on what the dynamics of alignment look like, and how scale will impact the level of misalignment; it appears to me that this disagreement can be succinctly represented using a a systems-theory lens. In this post, I break-down the dynamics of alignment in this way. This surfaces a couple of questions which seem crux-y to me, which I then explore. 
+{/* ## Different possible end states
+
+Friendly AI
+
+Rogue AI
+
+Mixed AI
+
+Mixed AI is unlikely to be an equilibrium point of the dynamics because the failures that appear will likely get patched. Either these patches work well, in which case, we will move to the friendly AI. Or they do not work well and we move towards the Rogue AI. */}
+
+Let us begin with the optimistic take on alignment. The core argument is that (1) models today help people accomplish their goals quite well, and are quite well-aligned (2) furthermore, as models become more capable, we can use them to do alignment research and this will only increase the level of alignment of the model. This can be represented as a simple positive feedback loop diagram, where alignment and capabilities continuously reinforce each other; this would lead to a perfectly well-aligned model in the limit.
+
+<ReinforcingLoop
+  leftLabel="Alignment"
+  rightLabel="Capability"
+  caption="The optimist's bet: better alignment makes capability research safer and more productive, which in turn produces better tools for alignment. Both grow together."
+/>
+
+Now, let us consider the pessimist's take. 
+
+<ShiftingTheBurden
+  symptomLabel="Alignment failures"
+  symptomaticLabel="Catch-and-patch"
+  fundamentalLabel="Deep understanding"
+  caption="Patches reduce visible failures in the short term — but each patch erodes the muscle for fundamental work. The hidden risk grows even as everything looks fine on the surface."
+/>
+
+Where the two diagrams disagree is which forces are *stabilizing* or *destabilizing* to the level of alignment of the model. The forces under question here are (1) the alignment techniques that we are developing in research such as safety training, monitoring, interpretability (2) model capabilities. 
+
+The optimist claims that the alignment techniques that we have today  are strongly stabilizing, which is what explains 
+
+Here, the "supposed" stabilizing forces are actually an illusion, and they are truly destabilizing and make the underlying problem worse.
+
+## How we can define misalignment
+
+Objective misalignment:
+
+Worst-case behavioural misalignment: 
+
+For the diagrams in the future sections, when we refer to misalignment, we are talking about the latter.
+
+## What are the hypothesized dynamics which will lead to each of these? 
+
+Fundamentally, these are questions about the stability of dynamical system. 
+
+
+The Pessimist's picture for why it will never work well (Sharp Left Turn Dynamics):
+
+
+
+
+{/* Gradual Disempowerment Dynamics:  
+
+Here, there are truly stabilizing and destabilizing forces, but the argument is that the destabilizing forces are so powerful (and self-reinforcing) that the stabilizing forces will never be able to maintain pace.
+
+<CompetingLoops
+  caption="Even strong alignment effort only flattens the slope — it doesn't reverse it. The capability side has reinforcing momentum (revenue funds more capability funds more revenue), while alignment is a balancing brake that can be outpaced."
+/> */}
+
+## This raises some crucial questions
+
+1. Is capability going to be a stabilizing or destabilizing force for alignment? Or both?
+
+2. Which alignment techniques are actually fixing the problem versus just hiding it under the rug?
+
+
+## Personal Hot Takes
+
+Personally, I do think that the Optimist's perspective which does not take the destabilizing forces into account is a bit naive. On the other extreme, I think that the Pessimist's perspective, which claims that there are no stabilizing forces at all, and all alignment research is making the underlying problem worse, is unlikely to be true.
+
+We are likely to be in some intermediate regime. In the easy version of this, the current catch-and-patch alignment techniques are actually stabilizing and are able to outpace the destabilizing forces.
+
+In the harder version, we would need something like reliable interpretability that we can train against, which is not possible for the model to game.  
+
+In either case, it is a good idea to:
+1. Try to limit and slow down the destabilizign forces (even if we are not able to stop them completely). The next post will dive into this in more detail.
+2. Adjust the incentive structures so that the stabilizing forces are in line with economic incentives, rather than fighting against them. 
+
+---
+
+## Notes
+
+This has become very interesting. The diagrams right now are looking pretty different than each other.. should I leave it that way?
+
+Or try to make a more complicated diagram that takes all the factors into account? 
+
+So right now I am a bit confused on the picture. I will let it marinate for some more time and return to it then.
+
+I think this is good, and I am getting somewhere with this.
+
+I'm leaning on the side of leaving the diagrams like this for the first version, and then maybe writing a subsequent post on the big diagram. Because I feel like these diagrams capture the essence of the different positions quite well in terms of which parts of the system they are focussing on primarily. 
+
+
+
