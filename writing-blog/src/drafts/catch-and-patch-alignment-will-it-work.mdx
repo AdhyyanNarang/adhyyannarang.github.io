@@ -11,9 +11,9 @@ import CompetingLoops from '../../components/viz/CompetingLoops.jsx';
 
 {/* The field of alignment has undergone a transition in the last few years. Originally, the field was dominated by theoretical arguments about decision theory and agency. And now the field has become very empirical, what I term the "catch-and-patch" era of alignment: where you use monitors (behavioral and chain-of-thought based) to detect any alignment issues and you patch it using standard techniques (most commonly some type of fine-tuning). Right now, the CoT seems quite reliable, and we are able to reliably detect most alignment failures. But, will this approach work as we head into AGI? */}
 
+Recently, I was reading [this blog post](https://www.lesswrong.com/posts/epjuxGnSPof3GnMSL/alignment-remains-a-hard-unsolved-problem) by Evan Hubinger on LessWrong, which presents a pretty balanced take on the difficulty of the alignment problem. It roughly concludes that the models of today are quite well-aligned. However, we have not encountered the ingredients that make the alignment problem especially difficult; these will only reveal themselves with scale, and it is unclear whether the techniques that are working today will work in this fundamentally new regime. 
 
-In this post, I take a step back and do my best at breaking down this question using a systems-theory lens. 
-
+In the comments, we see pushback in both directions. Adria-Garriga-Alonso presents an optimistic pushback, whereas Eliezer Yudkowsky presents a pessimistic pushback. The arguments on these extremes were especially interesting to me. These worldviews disagree on what the dynamics of alignment look like, and how scale will impact the level of misalignment; it appears to me that this disagreement can be succinctly represented using a a systems-theory lens. In this post, I break-down the dynamics of alignment in this way. This surfaces a couple of questions which seem crux-y to me, which I then explore. 
 {/* ## Different possible end states
 
 Friendly AI
@@ -57,13 +57,13 @@ The Pessimist's picture for why it will never work well (Sharp Left Turn Dynamic
 Here, the "supposed" stabilizing forces are actually an illusion, and they are truly destabilizing and make the underlying problem worse.
 
 
-Gradual Disempowerment Dynamics:  
+{/* Gradual Disempowerment Dynamics:  
 
 Here, there are truly stabilizing and destabilizing forces, but the argument is that the destabilizing forces are so powerful (and self-reinforcing) that the stabilizing forces will never be able to maintain pace.
 
 <CompetingLoops
   caption="Even strong alignment effort only flattens the slope — it doesn't reverse it. The capability side has reinforcing momentum (revenue funds more capability funds more revenue), while alignment is a balancing brake that can be outpaced."
-/>
+/> */}
 
 ## This raises some crucial questions
 
