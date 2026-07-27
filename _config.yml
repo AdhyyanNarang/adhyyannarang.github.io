@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Adhyyan Narang"
 title_separator          : "-"
 name                     : &name "Adhyyan Narang"
-description              : &description "AI Researcher | PhD, University of Washington"
+description              : &description "Machine Learning Researcher | PhD, University of Washington"
 url                      : "https://adhyyannarang.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 #url                      : http://localhost:4000/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -84,12 +84,12 @@ analytics:
 author:
   name             : "Adhyyan Narang"
   avatar           : "headshot.jpg"
-  bio              : "AI Researcher | PhD, University of Washington"
+  bio              : "Machine Learning Researcher | PhD, University of Washington"
   location         : 
   employer         :
   pubmed           :
   googlescholar    : "https://scholar.google.com/citations?user=JTqlxIEAAAAJ&hl=en"
-  email            :  "adhyyan@uw.edu"
+  email            :  "adhyyan.n@gmail.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :

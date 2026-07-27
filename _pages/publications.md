@@ -10,7 +10,7 @@ author_profile: true
 
 ## AI Safety & LLM Alignment
 
-Modern LLMs are increasingly trained to maximize human feedback. But this creates a perverse incentive: the model can obtain higher reward by manipulating or deceiving users rather than genuinely helping them. We show that RL training on user feedback leads to targeted manipulation of users who are vulnerable to such strategies, with implications for how we deploy and oversee these systems.
+I study how harmful or hidden behaviors can emerge from realistic LLM training pipelines and how to mitigate them. This includes targeted manipulation induced by optimization for user feedback, as well as inference-time consensus methods that suppress behaviors introduced by poisoned or otherwise problematic fine-tuning data without requiring labels for safe source models.
 
 {% for post in site.publications reversed %}
 {% if post.category contains 'safety' %}

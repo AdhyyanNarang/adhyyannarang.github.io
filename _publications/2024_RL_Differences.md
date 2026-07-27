@@ -5,10 +5,9 @@ urltext: 'arxiv'
 arxivurl: 'https://arxiv.org/abs/2406.06856'
 collection: preprints
 category: 'online'
-permalink: /preprint/2010-10-01-paper-title-number-1
+permalink: /publications/policy-difference-estimation/
 year: 2024
-venue: NeurIPS
+venue: NeurIPS (Spotlight)
 date: 2024-10-21
 
 ---
-

@@ -9,4 +9,4 @@ redirect_from:
 
 {% include base_path %}
 
-To view a PDF copy of my Academic CV, please click [__*here*__](/files/Academic_CV_Adhyyan.pdf).
+View or download my [academic CV](/files/Academic_CV_Adhyyan.pdf).

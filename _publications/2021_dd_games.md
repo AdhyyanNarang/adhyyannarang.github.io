@@ -1,14 +1,13 @@
 ---
-title: 'Decision Dependent Learning in the Presence of Competition'
+title: 'Learning in Stochastic Monotone Games with Decision-Dependent Data'
 authors: 'Adhyyan Narang, Evan Faulkner, Dmitriy Drusvyatskiy, Maryam Fazel, Lillian J Ratliff'
 urltext: 'PMLR'
 arxivurl: 'https://proceedings.mlr.press/v151/narang22a.html'
 collection: publications
 category: 'strategic'
-permalink: /preprint/2010-10-01-paper-title-number-1
+permalink: /publications/stochastic-monotone-games/
 year: 2022
-venue: AIStats
+venue: AISTATS
 date: 2021-09-27
 
 ---
-
