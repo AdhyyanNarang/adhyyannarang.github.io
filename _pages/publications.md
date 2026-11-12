@@ -10,7 +10,7 @@ author_profile: true
 
 ## AI Safety & LLM Alignment
 
-I study how harmful or hidden behaviors can emerge from realistic LLM training pipelines and how to mitigate them. This includes targeted manipulation induced by optimization for user feedback, as well as inference-time consensus methods that suppress behaviors introduced by poisoned or otherwise problematic fine-tuning data without requiring labels for safe source models.
+I study how harmful or hidden behaviors can emerge from realistic LLM training pipelines and how to mitigate them. This includes targeted manipulation induced by optimization for user feedback, as well as consensus distillation that retains capabilities shared across training sources while suppressing source-specific harmful behaviors, without knowing which sources are compromised.
 
 {% for post in site.publications reversed %}
 {% if post.category contains 'safety' %}

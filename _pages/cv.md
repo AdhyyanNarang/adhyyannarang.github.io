@@ -9,4 +9,4 @@ redirect_from:
 
 {% include base_path %}
 
-View or download my [academic CV](/files/Academic_CV_Adhyyan.pdf).
+View or download my [research CV (PDF)](/files/Academic_CV_Adhyyan.pdf), focused on empirical AI alignment.
