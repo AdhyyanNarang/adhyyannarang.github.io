@@ -23,6 +23,8 @@ Prior to joining UW, I completed my master's degree in 2020 in the [BLISS Lab](h
 M. Williams\*, M. Carroll\*, **A. Narang**, C. Weisser, B. Murphy, A. Dragan. "On Targeted Manipulation and Deception when Optimizing LLMs for User Feedback." **ICLR 2025** [(arXiv)](https://arxiv.org/abs/2411.02306)<br>
 **Press coverage:** [New York Times](https://www.nytimes.com/2025/06/13/technology/chatgpt-ai-chatbots-conspiracies.html) · [Washington Post](https://www.washingtonpost.com/technology/2025/05/31/ai-chatbots-user-influence-attention-chatgpt)
 
+C. Li, **A. Narang**, J. Yuan, J. F. Buss, J. Suh, D. Sandel-Fernandez, Y. Tsvetkov, A. M. Kuczynski, T. Althoff. "SimAI: Mechanistic User Simulation through Psychological Network Models." *Preprint, 2026.* [(arXiv)](https://arxiv.org/abs/2611.21808) [(code)](https://github.com/behavioral-data/ANGEL-UserSim)
+
 **A. Narang**, S. Dean, L. Ratliff, M. Fazel. "Dynamics of Learning under User Choice: Overspecialization and Peer-Model Probing." **UAI 2026** [(arXiv)](https://arxiv.org/abs/2602.23565)
 
 **A. Narang**, A. Wagenmaker, L. Ratliff, K. Jamieson. "Sample Complexity Reduction via Policy Difference Estimation in Tabular Reinforcement Learning." **NeurIPS 2024 (Spotlight)** [(arXiv)](https://arxiv.org/abs/2406.06856)
